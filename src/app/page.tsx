@@ -1,7 +1,7 @@
-import Image from 'next/image'
+import Home from "./Pages/Home/page";
 
-export default function Home() {
+export default function Index() {
   return (
-    <h1>Teste</h1>
+    <Home/>
   )
 }
