@@ -1,9 +1,14 @@
 import Link from "next/link"
+import { ReactNode } from "react";
+
+//import icon
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 type linkProps = {
     id?: number,
     name?: string,
     path?: string,
+    icon?: ReactNode,
 }[]
 
 const link: linkProps = [
@@ -27,6 +32,10 @@ const link: linkProps = [
         name: 'Contact Us',
         path: '/Pages/Contact',
     },
+    {
+        id: 4,
+        icon: <AiOutlineShoppingCart />,
+    },
 
 ]
 
@@ -38,7 +47,7 @@ export default function Navlink() {
                     return (
                         <Link key={l.id} href={`${l.path}`}>
                             <li className="text-lg">
-                                {l.name}
+                                {l.icon} {l.name}
                             </li>
                         </Link>
                     )
