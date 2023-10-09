@@ -6,7 +6,7 @@ export default function Header() {
         <>
             <div className="flex justify-between mx-7">
                 <h1 className="text-4xl">Logo</h1>
-                <ul className="flex gap-6">
+                <ul className="flex justify-center items-center gap-6">
                     <Navlink />
                     <Button
                         name="Sign Up"

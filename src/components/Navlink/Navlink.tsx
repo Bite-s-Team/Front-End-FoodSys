@@ -39,6 +39,8 @@ const link: linkProps = [
 
 ]
 
+
+
 export default function Navlink() {
     return (
         <>
@@ -46,7 +48,7 @@ export default function Navlink() {
                 (l) => {
                     return (
                         <Link key={l.id} href={`${l.path}`}>
-                            <li className="text-lg">
+                            <li className={`text-md hover:scale-[1.05]`}>
                                 {l.icon} {l.name}
                             </li>
                         </Link>
