@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/Button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 const link = [
     {
@@ -31,6 +31,7 @@ const link = [
 export default function Header() {
 
     const activePath = usePathname();
+    const router = useRouter();
 
     return(
         <nav className='flex justify-between mx-3 mt-4'>
@@ -47,10 +48,10 @@ export default function Header() {
                 ))}
             </div>
             <div>
-                <Button variant='link'>
+                <Button variant='link' onClick={() => router.push('/signup')}>
                     Criar conta
                 </Button>
-                <Button size='xl'>
+                <Button size='xl' onClick={() => router.push('/login')}>
                     Login
                 </Button>
             </div>
