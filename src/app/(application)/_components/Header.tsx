@@ -51,7 +51,7 @@ export default function Header() {
                 <Button variant='link' onClick={() => router.push('/signup')}>
                     Criar conta
                 </Button>
-                <Button size='xl' onClick={() => router.push('/login')}>
+                <Button size='xl' onClick={() => router.push('/login')}> 
                     Login
                 </Button>
             </div>
