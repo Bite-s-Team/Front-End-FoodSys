@@ -1,7 +1,16 @@
+'use client';
+
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react";
+import Stepper from "../_components/CurrentSteps/stepper"
+import BasicForm from "../_components/RegisterForm/BasicForm";
+import PaymentForm from "../_components/RegisterForm/PaymentForm";
 
 export default function SignUp() {
+
+    
+
     return(
        <>
             <header className="flex justify-between items-center mx-3 mt-3">
@@ -17,6 +26,9 @@ export default function SignUp() {
                 <div className="w-full flex justify-center">
                     <h1 className="text-2xl font-bold">Cadastrar</h1>
                 </div>
+                    <div className="flex justify-center">
+                        <Stepper/>
+                    </div>
             </section>
        </>
     )
