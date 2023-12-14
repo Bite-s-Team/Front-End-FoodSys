@@ -4,8 +4,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react";
 import Stepper from "../_components/CurrentSteps/stepper"
-import BasicForm from "../_components/RegisterForm/BasicForm";
-import PaymentForm from "../_components/RegisterForm/PaymentForm";
+import BasicForm from "../_components/RegisterForm/BasicForm/BasicForm";
+import PaymentForm from "../_components/RegisterForm/PaymentForm/PaymentForm";
+import RegisterForm from "../_components/RegisterForm/RegisterForm";
 
 export default function SignUp() {
 
@@ -22,12 +23,15 @@ export default function SignUp() {
                     </span>
                 </p>
             </header>
-            <section className="w-full">
+            <section className="w-full flex flex-col">
                 <div className="w-full flex justify-center">
                     <h1 className="text-2xl font-bold">Cadastrar</h1>
                 </div>
                     <div className="flex justify-center">
                         <Stepper/>
+                    </div>
+                    <div className="flex justify-center mt-10 items-center">
+                        <RegisterForm/>
                     </div>
             </section>
        </>

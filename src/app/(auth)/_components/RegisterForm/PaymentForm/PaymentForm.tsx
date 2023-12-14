@@ -1,9 +1,12 @@
+import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { useRegister } from "./useRegister";
+import { useCurrent } from "@/hooks/useCurrent";
+import { useRegister } from "../useRegister";
 
 export default function PaymentForm() {
 
     const {register, handleSubmit, errors} = useRegister();
+    const [onNext, onPrev] = useCurrent((state) => [state.onNext, state.onPrev]);
 
     return(
         <form className="flex flex-col gap-3">
@@ -25,6 +28,12 @@ export default function PaymentForm() {
                 {...register('phone')}
                 error={errors.phone?.message}
             />
+            <Button onClick={onPrev}>
+                Voltar
+            </Button>
+            <Button>
+                enviar
+            </Button>
         </form>
     )
 }
