@@ -25,8 +25,11 @@ export default function PaymentForm() {
         </div>
       </div>
       <div className="flex gap-20">
-        <Button type="submit">Salvar e continuar</Button>
-        <Button variant="link" onClick={onPrev}>
+        <div className="flex flex-col gap-4">
+          <Button onClick={onPrev}>Voltar</Button>
+          <Button type="submit">Salvar e continuar</Button>
+        </div>
+        <Button variant="link" onClick={onNext}>
           Adicionar mais tarde
         </Button>
       </div>
