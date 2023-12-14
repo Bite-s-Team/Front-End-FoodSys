@@ -7,7 +7,7 @@ export default function PaymentForm() {
   const [onNext, onPrev] = useCurrent((state) => [state.onNext, state.onPrev]);
 
   return (
-    <form className="flex flex-col gap-3">
+    <form className="flex flex-col gap-3" onSubmit={() => onNext()}>
       <div className="flex flex-col gap-3">
         <Label>Nome do Cartao</Label>
         <Input placeholder="Nome do Cartão" type="text" />
@@ -25,7 +25,7 @@ export default function PaymentForm() {
         </div>
       </div>
       <div className="flex gap-20">
-        <Button>Salvar e continuar</Button>
+        <Button type="submit">Salvar e continuar</Button>
         <Button variant="link" onClick={onPrev}>
           Adicionar mais tarde
         </Button>

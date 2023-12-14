@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/label";
 import { useCurrent } from "@/hooks/useCurrent";
-import { useRegister } from "../useRegister";
+import { useRegister } from "./useBasic";
 
 export default function BasicForm() {
   const { register, handleSubmit, errors } = useRegister();

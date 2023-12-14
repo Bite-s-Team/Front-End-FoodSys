@@ -1,5 +1,6 @@
 import { useCurrent } from "@/hooks/useCurrent";
 import BasicForm from "./BasicForm/BasicForm";
+import FinishForm from "./FinishForm/FinishForm";
 import PaymentForm from "./PaymentForm/PaymentForm";
 
 export default function RegisterForm() {
@@ -11,10 +12,17 @@ export default function RegisterForm() {
         <BasicForm />
       </div>
     );
-  } else {
+  }
+  if (step == 2) {
     return (
       <div>
         <PaymentForm />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <FinishForm />
       </div>
     );
   }
