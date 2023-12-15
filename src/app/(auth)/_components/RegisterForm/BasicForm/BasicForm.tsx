@@ -2,16 +2,19 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/label";
 import { useCurrent } from "@/hooks/useCurrent";
-import { useRegister } from "./useBasic";
+import { useBasic } from "./useBasic";
 
 export default function BasicForm() {
-  const { register, handleSubmit, errors } = useRegister();
+  const { register, handleSubmit, handleBasic, errors } = useBasic();
   const next = useCurrent((state) => state.onNext);
 
   return (
     <div className="flex flex-col gap-6">
       <h1 className="font-bold">Detalhes Básicos</h1>
-      <form className="flex flex-col gap-3" onSubmit={() => next()}>
+      <form
+        className="flex flex-col gap-3"
+        onSubmit={handleSubmit(handleBasic)}
+      >
         <div className="flex gap-3">
           <div className="flex flex-col gap-3">
             <Label>Seu Nome completo</Label>

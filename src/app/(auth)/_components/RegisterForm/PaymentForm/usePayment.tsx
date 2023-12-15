@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import { schema, schemaProps } from "./schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { schema, schemaProps } from "./schema";
 import { useCurrent } from "@/hooks/useCurrent";
 
-export const useBasic = () => {
+export const usePayment = () => {
   const {
     register,
     handleSubmit,
@@ -16,7 +16,7 @@ export const useBasic = () => {
 
   const onNext = useCurrent((state) => state.onNext);
 
-  function handleBasic(data: schemaProps) {
+  function handlePayment(data: schemaProps) {
     console.log(data);
     onNext();
   }
@@ -24,7 +24,7 @@ export const useBasic = () => {
   return {
     register,
     handleSubmit,
-    handleBasic,
+    handlePayment,
     errors,
   };
 };
