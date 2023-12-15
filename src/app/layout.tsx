@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={open.className}>{children}</body>
+      <body suppressHydrationWarning={true} className={open.className}>{children}</body>
     </html>
   )
 }

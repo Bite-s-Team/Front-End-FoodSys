@@ -11,6 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-orange-400 text-white hover:bg-orange-400/90",
         link: "text-orange-400 underline-offset-4 hover:underline",
+        cardButton: "w-full bg-orange-400 text-white rounded-none font-semibold"
       },
       size: {
         default: "h-10 px-4 py-2",
