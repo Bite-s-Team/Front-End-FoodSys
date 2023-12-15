@@ -17,7 +17,7 @@ export const useBasic = () => {
   const onNext = useCurrent((state) => state.onNext)
 
   function handleBasic(data: schemaProps) {
-    console.log(data)
+    localStorage.setItem("step1", JSON.stringify(data))
     onNext()
   }
 
