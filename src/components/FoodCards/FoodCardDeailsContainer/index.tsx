@@ -1,11 +1,9 @@
+import { ReactNode } from "react"
 
-import { ReactNode } from 'react';
-
-export function FoodCardDetailsContainer({children}:{children: ReactNode}){
-
-  return(
-    <div className='flex justify-between w-full p-3'>
-      {children}
-    </div>
-  )
+export function FoodCardDetailsContainer({
+  children,
+}: {
+  children: ReactNode
+}) {
+  return <div className="flex w-full justify-between p-3">{children}</div>
 }

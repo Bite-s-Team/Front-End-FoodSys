@@ -1,7 +1,7 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { schema, schemaProps } from "./schema";
-import { useCurrent } from "@/hooks/useCurrent";
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { schema, schemaProps } from "./schema"
+import { useCurrent } from "@/hooks/useCurrent"
 
 export const usePayment = () => {
   const {
@@ -12,13 +12,13 @@ export const usePayment = () => {
     mode: "onBlur",
     criteriaMode: "all",
     resolver: zodResolver(schema),
-  });
+  })
 
-  const onNext = useCurrent((state) => state.onNext);
+  const onNext = useCurrent((state) => state.onNext)
 
   function handlePayment(data: schemaProps) {
-    console.log(data);
-    onNext();
+    console.log(data)
+    onNext()
   }
 
   return {
@@ -26,5 +26,5 @@ export const usePayment = () => {
     handleSubmit,
     handlePayment,
     errors,
-  };
-};
+  }
+}

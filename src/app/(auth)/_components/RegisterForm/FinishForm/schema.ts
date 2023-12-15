@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod"
 
 export const schema = z
   .object({
@@ -8,12 +8,12 @@ export const schema = z
   })
   .refine(
     (values) => {
-      return values.password === values.confirmPassword;
+      return values.password === values.confirmPassword
     },
     {
       message: "As senhas precisam estar iguais!",
       path: ["confirmPassword"],
     }
-  );
+  )
 
-export type schemaProps = z.infer<typeof schema>;
+export type schemaProps = z.infer<typeof schema>

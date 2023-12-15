@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { useCurrent } from "@/hooks/useCurrent";
-import { useFinish } from "./useFinish";
+import { Button } from "@/components/ui/Button"
+import { Input } from "@/components/ui/Input"
+import { useCurrent } from "@/hooks/useCurrent"
+import { useFinish } from "./useFinish"
 
 export default function FinishForm() {
-  const { register, handleSubmit, handleFinish, errors } = useFinish();
-  const onPrev = useCurrent((state) => state.onPrev);
+  const { register, handleSubmit, handleFinish, errors } = useFinish()
+  const onPrev = useCurrent((state) => state.onPrev)
 
   return (
     <div className="flex flex-col gap-6">
@@ -38,5 +38,5 @@ export default function FinishForm() {
         </div>
       </form>
     </div>
-  );
+  )
 }

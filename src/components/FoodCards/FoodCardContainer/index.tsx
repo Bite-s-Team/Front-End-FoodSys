@@ -1,10 +1,5 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
-export function FoodCardContainer({children}:{children:ReactNode}){
-
-  return (
-    <div className="flex flex-col items-start w-auto">
-      {children}
-    </div>
-  )
+export function FoodCardContainer({ children }: { children: ReactNode }) {
+  return <div className="flex w-auto flex-col items-start">{children}</div>
 }

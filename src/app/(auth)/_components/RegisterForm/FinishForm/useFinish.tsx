@@ -1,6 +1,6 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { schema, schemaProps } from "./schema";
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { schema, schemaProps } from "./schema"
 
 export const useFinish = () => {
   const {
@@ -11,10 +11,10 @@ export const useFinish = () => {
     mode: "onBlur",
     criteriaMode: "all",
     resolver: zodResolver(schema),
-  });
+  })
 
   function handleFinish(data: schemaProps) {
-    console.log(data);
+    console.log(data)
   }
 
   return {
@@ -22,5 +22,5 @@ export const useFinish = () => {
     handleSubmit,
     handleFinish,
     errors,
-  };
-};
+  }
+}

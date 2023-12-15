@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod"
 
 export const schema = z.object({
   name: z.string().min(6, "nome é muito pequeno"),
@@ -17,6 +17,6 @@ export const schema = z.object({
     .refine((data) => !/[a-z A-Z]+/.test(data), {
       message: "Digite somente números",
     }),
-});
+})
 
-export type schemaProps = z.infer<typeof schema>;
+export type schemaProps = z.infer<typeof schema>

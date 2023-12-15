@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
-export function FoodCardsContainer({children}:{children:ReactNode}){
-
+export function FoodCardsContainer({ children }: { children: ReactNode }) {
   return (
-    <section className="flex items-center justify-around gap-4 flex-wrap max-w-screen-2xl m-auto px-6">
+    <section className="m-auto flex max-w-screen-2xl flex-wrap items-center justify-around gap-4 px-6">
       {children}
     </section>
   )

@@ -1,30 +1,30 @@
-import * as React from "react";
-import { ReactNode } from "react";
+import * as React from "react"
+import { ReactNode } from "react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  icon?: ReactNode;
-  error?: string;
+  icon?: ReactNode
+  error?: string
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, error, icon, ...props }, ref) => {
     return (
       <>
-        <div className="pl-1 flex items-center justify-start bg-zinc-200 rounded focus-within:shadow-sm focus-within:border focus-within:border-black/50">
+        <div className="flex items-center justify-start rounded bg-zinc-200 pl-1 focus-within:border focus-within:border-black/50 focus-within:shadow-sm">
           {icon}
           <input
             type={type}
-            className={cn("p-2 bg-zinc-200 rounded-lg outline-none", className)}
+            className={cn("rounded-lg bg-zinc-200 p-2 outline-none", className)}
             ref={ref}
             {...props}
           />
         </div>
-        {error && <p className="text-destructive text-sm italic">{error}</p>}
+        {error && <p className="text-sm italic text-destructive">{error}</p>}
       </>
-    );
+    )
   }
-);
-Input.displayName = "Input";
+)
+Input.displayName = "Input"

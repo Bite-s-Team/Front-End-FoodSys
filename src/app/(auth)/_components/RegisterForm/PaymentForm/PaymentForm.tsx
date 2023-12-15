@@ -1,12 +1,12 @@
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Label } from "@/components/ui/label";
-import { useCurrent } from "@/hooks/useCurrent";
-import { usePayment } from "./usePayment";
+import { Button } from "@/components/ui/Button"
+import { Input } from "@/components/ui/Input"
+import { Label } from "@/components/ui/label"
+import { useCurrent } from "@/hooks/useCurrent"
+import { usePayment } from "./usePayment"
 
 export default function PaymentForm() {
-  const [onNext, onPrev] = useCurrent((state) => [state.onNext, state.onPrev]);
-  const { register, handleSubmit, handlePayment, errors } = usePayment();
+  const [onNext, onPrev] = useCurrent((state) => [state.onNext, state.onPrev])
+  const { register, handleSubmit, handlePayment, errors } = usePayment()
 
   return (
     <form
@@ -59,5 +59,5 @@ export default function PaymentForm() {
         </Button>
       </div>
     </form>
-  );
+  )
 }

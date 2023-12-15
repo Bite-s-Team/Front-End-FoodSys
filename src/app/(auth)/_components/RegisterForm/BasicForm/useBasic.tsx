@@ -1,7 +1,7 @@
-import { useForm } from "react-hook-form";
-import { schema, schemaProps } from "./schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useCurrent } from "@/hooks/useCurrent";
+import { useForm } from "react-hook-form"
+import { schema, schemaProps } from "./schema"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useCurrent } from "@/hooks/useCurrent"
 
 export const useBasic = () => {
   const {
@@ -12,13 +12,13 @@ export const useBasic = () => {
     mode: "onBlur",
     criteriaMode: "all",
     resolver: zodResolver(schema),
-  });
+  })
 
-  const onNext = useCurrent((state) => state.onNext);
+  const onNext = useCurrent((state) => state.onNext)
 
   function handleBasic(data: schemaProps) {
-    console.log(data);
-    onNext();
+    console.log(data)
+    onNext()
   }
 
   return {
@@ -26,5 +26,5 @@ export const useBasic = () => {
     handleSubmit,
     handleBasic,
     errors,
-  };
-};
+  }
+}

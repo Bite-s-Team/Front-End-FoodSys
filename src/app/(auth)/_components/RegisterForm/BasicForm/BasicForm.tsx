@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Label } from "@/components/ui/label";
-import { useCurrent } from "@/hooks/useCurrent";
-import { useBasic } from "./useBasic";
+import { Button } from "@/components/ui/Button"
+import { Input } from "@/components/ui/Input"
+import { Label } from "@/components/ui/label"
+import { useBasic } from "./useBasic"
 
 export default function BasicForm() {
-  const { register, handleSubmit, handleBasic, errors } = useBasic();
-  const next = useCurrent((state) => state.onNext);
+  const { register, handleSubmit, handleBasic, errors } = useBasic()
 
   return (
     <div className="flex flex-col gap-6">
@@ -67,5 +65,5 @@ export default function BasicForm() {
         <Button>Salvar e continuar</Button>
       </form>
     </div>
-  );
+  )
 }

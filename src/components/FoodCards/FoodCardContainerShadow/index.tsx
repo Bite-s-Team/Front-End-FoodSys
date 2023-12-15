@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
-export function FoodCardContainerShadow({children}:{children:ReactNode}){
-
+export function FoodCardContainerShadow({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col items-start w-80 shadow-shadowCard rounded-md overflow-hidden">
+    <div className="flex w-80 flex-col items-start overflow-hidden rounded-md shadow-shadowCard">
       {children}
     </div>
   )
