@@ -2,9 +2,11 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { schema, schemaProps } from "./schema"
 import { useRouter } from "next/navigation"
+import { useCurrent } from "@/hooks/useCurrent"
 
 export const useFinish = () => {
   const router = useRouter()
+  const onReset = useCurrent((state) => state.onReset)
 
   const {
     register,
@@ -24,6 +26,7 @@ export const useFinish = () => {
 
     localStorage.clear()
     router.push("/")
+    onReset()
   }
 
   return {
