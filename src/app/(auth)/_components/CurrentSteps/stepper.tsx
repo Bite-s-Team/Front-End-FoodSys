@@ -1,4 +1,4 @@
-import { useCurrent } from "@/hooks/useCurrent"
+import { useCurrent } from "@/app/store/useCurrent"
 
 export default function Stepper() {
   const atualStep = useCurrent((state) => state.step)

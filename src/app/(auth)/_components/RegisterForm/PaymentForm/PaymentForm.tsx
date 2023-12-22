@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Label } from "@/components/ui/label"
-import { useCurrent } from "@/hooks/useCurrent"
+import { useCurrent } from "@/app/store/useCurrent"
 import { usePayment } from "./usePayment"
 import { useEffect } from "react"
 

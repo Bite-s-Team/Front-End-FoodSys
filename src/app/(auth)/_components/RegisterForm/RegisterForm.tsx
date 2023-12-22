@@ -1,4 +1,4 @@
-import { useCurrent } from "@/hooks/useCurrent"
+import { useCurrent } from "@/app/store/useCurrent"
 import BasicForm from "./BasicForm/BasicForm"
 import FinishForm from "./FinishForm/FinishForm"
 import PaymentForm from "./PaymentForm/PaymentForm"

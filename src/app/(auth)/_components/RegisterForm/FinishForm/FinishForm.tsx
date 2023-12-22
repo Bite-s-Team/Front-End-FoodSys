@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { useCurrent } from "@/hooks/useCurrent"
+import { useCurrent } from "@/app/store/useCurrent"
 import { useFinish } from "./useFinish"
 
 export default function FinishForm() {

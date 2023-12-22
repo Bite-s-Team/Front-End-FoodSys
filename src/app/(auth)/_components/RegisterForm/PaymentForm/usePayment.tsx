@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { schema, schemaProps } from "./schema"
-import { useCurrent } from "@/hooks/useCurrent"
+import { useCurrent } from "@/app/store/useCurrent"
 
 export const usePayment = () => {
   const {

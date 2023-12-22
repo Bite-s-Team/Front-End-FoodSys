@@ -3,15 +3,14 @@ import { Input } from "@/components/ui/Input"
 import { Label } from "@/components/ui/label"
 import { useBasic } from "./useBasic"
 import { useEffect } from "react"
+import { useData } from "@/app/store/useData"
 
 export default function BasicForm() {
   const { register, handleSubmit, handleBasic, setValue, errors } = useBasic()
-
-  const saveData = localStorage.getItem("step1")
+  const formData = useData((state) => state.formData)
 
   useEffect(() => {
-    if (saveData) {
-      const formData = JSON.parse(saveData)
+    if (formData) {
       setValue("name", formData.name)
       setValue("email", formData.email)
       setValue("address", formData.address)
@@ -19,7 +18,7 @@ export default function BasicForm() {
       setValue("cpf", formData.cpf)
       setValue("phone", formData.phone)
     }
-  }, [saveData])
+  }, [formData])
 
   return (
     <div className="flex flex-col gap-6">

@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form"
 import { schema, schemaProps } from "./schema"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useCurrent } from "@/hooks/useCurrent"
+import { useCurrent } from "@/app/store/useCurrent"
+import { useData } from "@/app/store/useData"
 
 export const useBasic = () => {
+  const setFormData = useData((state) => state.setFormData)
   const {
     register,
     handleSubmit,
@@ -18,7 +20,7 @@ export const useBasic = () => {
   const onNext = useCurrent((state) => state.onNext)
 
   function handleBasic(data: schemaProps) {
-    localStorage.setItem("step1", JSON.stringify(data))
+    setFormData(data)
     onNext()
   }
 
