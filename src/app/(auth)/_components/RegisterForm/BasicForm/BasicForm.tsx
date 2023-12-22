@@ -7,7 +7,7 @@ import { useData } from "@/app/store/useData"
 
 export default function BasicForm() {
   const { register, handleSubmit, handleBasic, setValue, errors } = useBasic()
-  const formData = useData((state) => state.formData)
+  const formData = useData((state) => state.formData1)
 
   useEffect(() => {
     if (formData) {

@@ -5,7 +5,7 @@ import { useCurrent } from "@/app/store/useCurrent"
 import { useData } from "@/app/store/useData"
 
 export const useBasic = () => {
-  const setFormData = useData((state) => state.setFormData)
+  const setFormData = useData((state) => state.setFormData1)
   const {
     register,
     handleSubmit,
