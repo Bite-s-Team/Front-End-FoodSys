@@ -3,10 +3,24 @@ import { Input } from "@/components/ui/Input"
 import { Label } from "@/components/ui/label"
 import { useCurrent } from "@/hooks/useCurrent"
 import { usePayment } from "./usePayment"
+import { useEffect } from "react"
 
 export default function PaymentForm() {
   const [onNext, onPrev] = useCurrent((state) => [state.onNext, state.onPrev])
-  const { register, handleSubmit, handlePayment, errors } = usePayment()
+  const { register, handleSubmit, handlePayment, setValue, errors } =
+    usePayment()
+
+  const saveData = localStorage.getItem("step2")
+
+  useEffect(() => {
+    if (saveData) {
+      const formData = JSON.parse(saveData)
+      setValue("name_card", formData.name_card)
+      setValue("number_card", formData.number_card)
+      setValue("date", formData.date)
+      setValue("cv", formData.cv)
+    }
+  }, [])
 
   return (
     <form

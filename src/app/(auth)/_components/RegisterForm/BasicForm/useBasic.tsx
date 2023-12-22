@@ -7,6 +7,7 @@ export const useBasic = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<schemaProps>({
     mode: "onBlur",
@@ -24,6 +25,7 @@ export const useBasic = () => {
   return {
     register,
     handleSubmit,
+    setValue,
     handleBasic,
     errors,
   }

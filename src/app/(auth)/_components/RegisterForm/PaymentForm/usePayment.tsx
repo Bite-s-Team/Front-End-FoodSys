@@ -7,6 +7,7 @@ export const usePayment = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<schemaProps>({
     mode: "onBlur",
@@ -17,13 +18,14 @@ export const usePayment = () => {
   const onNext = useCurrent((state) => state.onNext)
 
   function handlePayment(data: schemaProps) {
-    console.log(data)
+    localStorage.setItem("step2", JSON.stringify(data))
     onNext()
   }
 
   return {
     register,
     handleSubmit,
+    setValue,
     handlePayment,
     errors,
   }
